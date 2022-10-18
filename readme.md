@@ -11,7 +11,7 @@
 - Instalamos TypeScript de forma global
 
 ```sh
-  npm install -g typescript
+  npm install -g TypeScript
 ```
 
 - Creamos una carpeta e inicializamos la configuracion de TypeScript, esto nos creara un archivo llamado tsconfig.json
@@ -46,10 +46,10 @@
   npm init -y
 ```
 
-- Instalamos node y typescript
+- Instalamos node y TypeScript
 
 ```sh
-  npm install --save-dev ts-node typescript
+  npm install --save-dev ts-node TypeScript
 ```
 
 - Inicializamos la configuracion de TypeScript, esto nos creara un archivo llamado tsconfig.json
@@ -143,6 +143,12 @@
 
 > El tipo de dato numero en TypeScript se identifica como number.
 
+- Declarando una variable
+
+```sh
+    let x: number;
+```
+
 - Como parametro en una funcion
 
 ```sh
@@ -156,6 +162,12 @@
 <br>
 
 > El tipo de dato string, texto. En TypeScript se identifica como string.
+
+- Declarando una variable
+
+```sh
+    let x: string;
+```
 
 - Como parametro en una funcion
 
