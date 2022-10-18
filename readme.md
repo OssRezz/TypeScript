@@ -1,10 +1,46 @@
 # TypeScript
 
-## Para que podamos utilizar TypeScript necesitamos node.js para compilarlo
+## Dos formas de iniciar un proyecto de TypeScript
 
 <br>
 
-- Iniciamos Npm
+### 1) TypeScipt de forma global
+
+<br>
+
+- Instalamos TypeScript de forma global
+
+```sh
+  npm install -g typescript
+```
+
+- Creamos una carpeta e inicializamos la configuracion de TypeScript, esto nos creara un archivo llamado tsconfig.json
+
+```sh
+  tsc --init
+```
+
+- Modificamos donde sera hara el build de TypeScript en el archivo tsconfig.json, En el atributo outDir, descomentamos y escrbimos la carpeta de preferencia.
+
+```sh
+   "outDir": "build" /* Specify an output folder for all emitted files. */,
+```
+
+<br>
+
+> Para compilar usamos el comando tsc en la consola y podremos ver los archivos en la carpeta del build
+
+```sh
+    tsc
+```
+
+<br>
+
+### 2) TypeScipt de forma local con node.js y npm
+
+<br>
+
+- Creamos una carpeta e inicializamos el proyecto de node.js con npm
 
 ```sh
   npm init -y
@@ -16,13 +52,34 @@
   npm install --save-dev ts-node typescript
 ```
 
+- Inicializamos la configuracion de TypeScript, esto nos creara un archivo llamado tsconfig.json
+
+```sh
+  tsc --init
+```
+
+<br>
+
+> Para compilar usamos el comando npx tsc en la consola y podremos ver los archivos en la carpeta del build
+
+```sh
+    npx tsc
+```
+
+<br>
+<br>
+
+### 2.1) <b> Ejecutar un archivo en la consola en caso de escoger la segunda forma</b>
+
+<br>
+
 - Creamos un nuevo archivo en la raiz del proyecto con la extesion .ts. Para este ejemplo voy a utilizar un archivo llamado: <b>multiplicador.ts</b>
 
 - Vamos a package.json y en scripts agregamos un nuevo atributo:
 
 ```sh
   "scripts": {
-     "nombre_de_la_accion" : "ts-node nombre_del_archivo_a_ejectuar"
+     "nombre_de_la_accion" : "ts-node nombre_del_archivo_a_ejectuar.ts"
     }
 ```
 
@@ -33,18 +90,17 @@
 - En la terminal escribimos el comando run y el nombre de la accion
 
 ```sh
-    npm run multiplicador
+    npm run nombre_de_la_accion
 ```
 
 <br>
+<br>
 
-# Podemos cambiar la configuracion de TypeScript para que nos permita modificarlo a nuestras necesidades
+# Configuracion de TypeScript
 
 <br>
 
-1. Creamos un archivo llamado tsconfig.json en la raiz del proyecto.
-
-2. Agregamos el siguiente json:
+> Con esta opcion le decimos a TS que no valide la implicidad de una variable de tipo any.
 
 ```sh
 {
@@ -54,7 +110,17 @@
 }
 ```
 
-- Con esta opcion le decimos a TS que no valide la implicidad de una variable de tipo any.
+<br>
+
+> Con esta opcion le decimos a TS en que carpeta hara el build
+
+```sh
+{
+    "compilerOptions": {
+       "outDir": "build" /* Specify an output folder for all emitted files. */,
+    }
+}
+```
 
 <br>
 <br>
