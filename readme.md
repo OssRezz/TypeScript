@@ -125,7 +125,7 @@
 <br>
 <br>
 
-# Tipos de datos en TypeScript
+# Tipos de datos primitivos en TypeScript
 
 <br>
 
@@ -147,6 +147,7 @@
 
 ```sh
     let x: number;
+    let big: bigint = 100n;
 ```
 
 - Como parametro en una funcion
@@ -173,6 +174,26 @@
 
 ```sh
     function numero(nombre: string){}
+```
+
+<br>
+
+### Tipar un boleano:
+
+<br>
+
+> El tipo de dato boleano en TypeScript se identifica como boolean.
+
+- Declarando una variable
+
+```sh
+    let flag: boolean;
+```
+
+- Como parametro en una funcion
+
+```sh
+    function sendMensaje(mensaje: boolean){}
 ```
 
 <br>
@@ -237,6 +258,10 @@ console.log(calculator(2, 0, "division"));
 
 <br>
 
+# Enumeradores
+
+<br>
+
 # TypeScript nos permite indicar que retorna una funcion
 
 <br>
@@ -263,3 +288,5 @@ console.log(calculator(2, 0, "division"));
     type Retorno = number | string;
     function numero(nombre: string): Retorno {}
 ```
+
+44:05
