@@ -11,7 +11,7 @@
 - Instalamos TypeScript de forma global
 
 ```sh
-  npm install -g TypeScript
+  npm install -g typescript
 ```
 
 - Creamos una carpeta e inicializamos la configuracion de TypeScript, esto nos creara un archivo llamado tsconfig.json
